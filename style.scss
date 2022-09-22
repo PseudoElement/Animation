@@ -1,0 +1,73 @@
+@import "null.scss";
+body{
+    max-width: 100%;
+}
+section{margin-bottom: 30px;
+    border: 2px solid red;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    &.transition{
+        button{
+            padding: 1% 5%;
+            font-size: 30px;
+            border-radius: 50px;
+            color: aliceblue;
+            background: -webkit-linear-gradient(top, #d2ff52 0%,#91e842 100%);
+            box-shadow:0px 3px 15px 5px #6dc020;
+            transition: all 1s;
+            
+            &:hover{
+                position: relative;
+                top: 3px;
+                box-shadow: 0px 0 15px 5px #550cc9;
+                background: -webkit-linear-gradient(top, #ff3019 0%,#ff3019 33%,#cf0404 100%);
+
+            }           
+        }
+    }
+    &.animation{
+        .circle{display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background: rgb(187, 43, 38);
+            position: relative;
+            animation-name: red_circle;
+            animation-duration: 2s; 
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes red_circle{
+            0%{transform: rotate(-360deg);
+                left: 0px;
+            }
+            50%{
+            }
+            100%{
+                left: 400px;
+            }
+        }
+        .text{
+            margin-top: 50px;
+            //border: 2px solid black;
+            overflow: hidden;
+            p{position: relative;
+            animation-name: walking_text;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            }
+        }
+        @keyframes walking_text{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 950px;
+            }
+        }
+
+    }
+}

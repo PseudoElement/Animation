@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a :focus,
+a :active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button ::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a :visited {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  max-width: 100%;
+}
+
+section {
+  margin-bottom: 30px;
+  border: 2px solid red;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+section.transition button {
+  padding: 1% 5%;
+  font-size: 30px;
+  border-radius: 50px;
+  color: aliceblue;
+  background: -webkit-linear-gradient(top, #d2ff52 0%, #91e842 100%);
+  -webkit-box-shadow: 0px 3px 15px 5px #6dc020;
+          box-shadow: 0px 3px 15px 5px #6dc020;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+section.transition button:hover {
+  position: relative;
+  top: 3px;
+  -webkit-box-shadow: 0px 0 15px 5px #550cc9;
+          box-shadow: 0px 0 15px 5px #550cc9;
+  background: -webkit-linear-gradient(top, #ff3019 0%, #ff3019 33%, #cf0404 100%);
+}
+section.animation .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: rgb(187, 43, 38);
+  position: relative;
+  -webkit-animation-name: red_circle;
+          animation-name: red_circle;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+@-webkit-keyframes red_circle {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+    left: 0px;
+  }
+  100% {
+    left: 400px;
+  }
+}
+@keyframes red_circle {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+    left: 0px;
+  }
+  100% {
+    left: 400px;
+  }
+}
+section.animation .text {
+  margin-top: 50px;
+  overflow: hidden;
+}
+section.animation .text p {
+  position: relative;
+  -webkit-animation-name: walking_text;
+          animation-name: walking_text;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes walking_text {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 950px;
+  }
+}
+@keyframes walking_text {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 950px;
+  }
+}
