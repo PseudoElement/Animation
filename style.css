@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -108,8 +109,6 @@ section.transition button {
   transition: all 1s;
 }
 section.transition button:hover {
-  position: relative;
-  top: 3px;
   -webkit-box-shadow: 0px 0 15px 5px #550cc9;
           box-shadow: 0px 0 15px 5px #550cc9;
   background: -webkit-linear-gradient(top, #ff3019 0%, #ff3019 33%, #cf0404 100%);
@@ -144,6 +143,9 @@ section.animation .circle {
             transform: rotate(-360deg);
     left: 0px;
   }
+  50% {
+    border-radius: 0px;
+  }
   100% {
     left: 400px;
   }
@@ -153,6 +155,9 @@ section.animation .circle {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
     left: 0px;
+  }
+  50% {
+    border-radius: 0px;
   }
   100% {
     left: 400px;
@@ -186,4 +191,127 @@ section.animation .text p {
   to {
     left: 950px;
   }
+}
+section.graphic {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(50px, 1fr);
+  grid-template-columns: minmax(50px, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 0.5fr 1.7fr 0.7fr 3fr;
+  grid-template-rows: 0.5fr 1.7fr 0.7fr 3fr;
+}
+section.graphic > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+section.graphic > *:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+section.graphic > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+section.graphic > *:nth-child(4) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+section.graphic img {
+  max-width: 100%;
+  max-height: 100%;
+}
+section.graphic :nth-child(1),
+section.graphic :nth-child(2),
+section.graphic :nth-child(3),
+section.graphic :nth-child(4) {
+  border: dashed 2px gray;
+  max-width: 100%;
+  max-height: 100%;
+}
+section.section7 {
+  padding: 0 4%;
+}
+section.section7 .swiper {
+  padding: 30px 20px 50px 20px;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide {
+  padding: 5%;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left {
+  margin-right: 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 3% 150px 3% 150px;
+  grid-template-columns: 150px 150px 150px;
+      grid-template-areas: "thirth thirth first" "thirth thirth second";
+  -ms-grid-rows: 150px 3% 150px;
+  grid-template-rows: 150px 150px;
+  gap: 3%;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left div {
+  max-width: 300px;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left img {
+  height: 100%;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: first;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .first img {
+  border-radius: 5px;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .second {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: second;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .second img {
+  border-radius: 5px;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .thirth {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: thirth;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .left .thirth img {
+  border-radius: 5px;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide:nth-child(1) .right {
+  margin-top: 5%;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide .swiper-slide_wrapper {
+  border: black solid 3px;
+  margin: 0 20px;
+  max-height: 300px;
+  text-align: center;
+}
+section.section7 .swiper .swiper-wrapper .swiper-slide .swiper-slide_wrapper img {
+  height: 300px;
+}
+section.section7 .swiper .swiper-button-prev {
+  color: #A8B4E5;
+}
+section.section7 .swiper .swiper-button-prev::after {
+  content: "🡐";
+}
+section.section7 .swiper .swiper-button-next {
+  color: #A8B4E5;
+}
+section.section7 .swiper .swiper-button-next::after {
+  content: "🡐";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
